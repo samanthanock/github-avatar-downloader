@@ -44,7 +44,7 @@ function downloadImageByURL(url, filePath) {
 }
 
 getRepoContributors(commandOne, commandTwo, function(err, result) {
-  var url = result.avatar_ural;
+  var avatarUrl = result.avatar_url;
   var filePath = 'avatar/' + result.login + '.jpg';
-  downloadImageByURL(url, filePath);
+  downloadImageByURL(avatarUrl, filePath);
 });
