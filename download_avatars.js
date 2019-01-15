@@ -43,7 +43,8 @@ function downloadImageByURL(url, filePath) {
   request(url).pipe(fs.createWriteStream(filePath));
 }
 
-getRepoContributors('jquery', 'jquery', function(err, result) {
-  console.log('Errors:', err);
-  console.log('Result:', result);
+getRepoContributors(commandOne, commandTwo, function(err, result) {
+  var url = result.avatar_ural;
+  var filePath = 'avatar/' + result.login + '.jpg';
+  downloadImageByURL(url, filePath);
 });
