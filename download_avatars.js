@@ -19,7 +19,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
       '/contributors',
     headers: {
       'User-Agent': 'request',
-      Authorization: 'token ' + secrets.GITHUB_TOKEN,
+      Authorization: 'token ' + token.GITHUB_TOKEN,
     },
   };
 
@@ -27,7 +27,7 @@ function getRepoContributors(repoOwner, repoName, cb) {
   // the program should not attempt a request.
   // It should instead terminate with an error message letting the user know about the problem.
   if (commandOne === undefined || commandTwo === undefined) {
-    console.log('There is an error with your arguments!');
+    console.log('There is an error!');
     return false;
   }
 
